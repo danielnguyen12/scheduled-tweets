@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center justify-content-between">
   <h1>Twitter Accounts</h1>
-  <%= link_to "Connect a Twitter account", "/auth/twitter", data: {turbo: 'false' }, method: :post, class: 'btn btn-primary' %>
+  <%= link_to "Link a Twitter account", "/auth/twitter", data: {turbo: 'false' }, method: :post, class: 'btn btn-primary' %>
 </div>
 
 <% @twitter_accounts.each do |twitter_account| %>
@@ -9,6 +9,6 @@
       <%= image_tag twitter_account.image, class: 'rounded-circle' %>
       <%= link_to "@#{twitter_account.username}", "https://twitter.com/#{twitter_account.username}", target: :_blank %>
     </div>
-    <%= button_to 'Disconnect', twitter_account, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%= button_to 'Unlink', twitter_account, method: :delete, data: {turbo_confirm: 'Are you sure?'} %>
   </div>
 <% end %>
