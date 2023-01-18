@@ -72,4 +72,4 @@ group :test do
 end
 
 gem "omniauth-twitter", "~> 1.4"
-gem "omniauth-rails_csrf_protection", "~> 1.0"
+gem "omniauth-rails_csrf_protection", "~> 1.0.1"

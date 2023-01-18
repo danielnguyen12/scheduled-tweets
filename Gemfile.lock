@@ -242,7 +242,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  omniauth-rails_csrf_protection (~> 1.0)
+  omniauth-rails_csrf_protection (~> 1.0.1)
   omniauth-twitter (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.4)
