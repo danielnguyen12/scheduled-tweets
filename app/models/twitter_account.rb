@@ -1,4 +1,5 @@
 class TwitterAccount < ApplicationRecord
+  before_destroy :destroy_tweets
   belongs_to :user
   has_many :tweets
 
@@ -11,5 +12,11 @@ class TwitterAccount < ApplicationRecord
       config.access_token        = token
       config.access_token_secret = secret
     end
+  end
+
+  private
+
+  def destroy_tweets
+    self.tweets.destroy_all
   end
 end
